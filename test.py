@@ -133,6 +133,7 @@ pdf.cell(25, 10, 'wartosc brutto', border=1, align='C', ln=True)
 
 
 ilosc_rzedow = int(input('ile zostalo wykonanych uslug? '))
+<<<<<<< Updated upstream
 
 
 
