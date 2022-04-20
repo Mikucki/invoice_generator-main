@@ -134,11 +134,8 @@ pdf.cell(25, 10, 'wartosc brutto', border=1, align='C', ln=True)
 
 ilosc_rzedow = int(input('ile zostalo wykonanych uslug? '))
 
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 7a33181a35bc3c0f58200b8defffbdafc755b853
 
 
 for pick in range(1, int(ilosc_rzedow) +1):
@@ -167,30 +164,10 @@ for pick in range(1, int(ilosc_rzedow) +1):
     wartosc_netto = float(input(f'Wartosc netto do {usluga_pick}: '))
     pdf.cell(25 ,20, f'{wartosc_netto}', border=1, ln=0)
     
-<<<<<<< HEAD
-
-stawka_vat = float(input('Stawka VAT:'))
-wartosc_netto = int(input('watrosc_netto: '))
-wartosc_vat = int(wartosc_netto) * int(stawka_vat)
-wartosc_brutto = int(wartosc_netto) + int(wartosc_vat)
-
-for i in range(1, int(ilosc_rzedow) + 1):
-    pdf.cell(10, 20, f'{i}', border=1, align='C', ln=0 )
-
-
-for pick in range(1, int(ilosc_rzedow) + 1):
-    usluga_pick = input('usługa nr ' + f'{pick} :')
-    pdf.cell(60, 20, f'{pick}' + usluga_pick, border=1, align='C', ln=0)
-=======
->>>>>>> 7a33181a35bc3c0f58200b8defffbdafc755b853
 
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7a33181a35bc3c0f58200b8defffbdafc755b853
 
     wartosc_vat = (float(stawka_vat) / 100) * float(wartosc_netto)
     pdf.cell(25 ,20, f'{wartosc_vat}' , border=1, ln=0)
@@ -202,3 +179,4 @@ for pick in range(1, int(ilosc_rzedow) + 1):
 
 
 pdf.output('pdf_2.pdf')
+
