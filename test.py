@@ -133,7 +133,7 @@ pdf.cell(25, 10, 'wartosc brutto', border=1, align='C', ln=True)
 
 
 ilosc_rzedow = int(input('ile zostalo wykonanych uslug? '))
-<<<<<<< Updated upstrea
+
 
 
 for pick in range(1, int(ilosc_rzedow) +1):
@@ -162,7 +162,7 @@ for pick in range(1, int(ilosc_rzedow) +1):
     wartosc_netto = float(input(f'Wartosc netto do {usluga_pick}: '))
     pdf.cell(25 ,20, f'{wartosc_netto}', border=1, ln=0)
     
-=======
+
 stawka_vat = float(input('Stawka VAT:'))
 wartosc_netto = int(input('watrosc_netto: '))
 wartosc_vat = int(wartosc_netto) * int(stawka_vat)
@@ -182,7 +182,7 @@ for pick in range(1, int(ilosc_rzedow) + 1):
     pdf.cell(25, 20, f'{pick}' + usluga_pick, border=1, align='C', ln=1)
 
 
->>>>>>> Stashed changes
+
 
     wartosc_vat = (float(stawka_vat) / 100) * float(wartosc_netto)
     pdf.cell(25 ,20, f'{wartosc_vat}' , border=1, ln=0)
