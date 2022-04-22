@@ -95,7 +95,7 @@ pdf.cell(45, 0, 'Termin platnosci: ', border=0)
 pdf.cell(0, 0, f'{termin_płątności}', ln=True)
 
 pdf.line(10, 50, 205, 50)
-
+#add tags
 
 pdf.set_font('helvetica', '', 12)
 pdf.cell(140, 30, 'Sprzedawca: ', ln=False, border=0)
