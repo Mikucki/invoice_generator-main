@@ -153,10 +153,10 @@ for pick in range(1, int(ilosc_rzedow) +1):
         pdf.cell(25 ,20, f'{stawka_vat}' + '%', border=1, ln=0)
     elif stawka_vat == '5%' or '5' or '0.05':
         pdf.cell(25 ,20, f'{stawka_vat}' + '%', border=1, ln=0)
-    elif stawka_vat == 'np':
-        pdf.cell(25 ,20, f'{stawka_vat}' + '%', border=1, ln=0)
-    elif stawka_vat ==  'zw':
-        pdf.cell(25 ,20, f'{stawka_vat}' + '%', border=1, ln=0)
+    elif stawka_vat == 'zw' or 'zw':
+        pdf.cell(25 ,20, f'{stawka_vat}', border=1, ln=0)
+    elif stawka_vat == 'np' or 'np':
+        pdf.cell(25 ,20, f'{stawka_vat}', border=1, ln=0)
     else:
         pdf.cell(25 ,20, 'zla stawka VAT', border=1, ln=0)
 
@@ -166,29 +166,16 @@ for pick in range(1, int(ilosc_rzedow) +1):
     
 
 
-      
+
+
+
     wartosc_vat = (float(stawka_vat) / 100) * float(wartosc_netto)
     pdf.cell(25 ,20, f'{wartosc_vat}' , border=1, ln=0)
 
     wartosc_brutto = (float(wartosc_netto) + float(wartosc_vat))
-    pdf.cell(25 ,20, f'{wartosc_brutto}' , border=1, ln=1)
+    pdf.cell(25 ,20, f'{round(wartosc_brutto)}' , border=1, ln=1)
 
 
-#SUMA
-#dummy cell
-for x in range(1, int(ilosc_rzedow)):
-    suma_netto =+ wartosc_netto
-
-    
-pdf.cell(95, 20, '', border=1, ln=0)
-    
-pdf.cell(25, 20, f'suma: {suma_netto}', border=1, ln=0)
-pdf.cell(25, 20, '-', border=1, ln=0)
-suma_brutto = float(wartosc_brutto) * int(ilosc_rzedow)
-pdf.cell(25, 20, f'suma: {suma_brutto}', border=1, ln=1)
-
-
-
-
+#siemka musze zrobic yszukiwarke cen na bookingu 
 
 pdf.output('pdf_2.pdf')
