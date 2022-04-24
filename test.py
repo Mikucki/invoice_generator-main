@@ -166,16 +166,26 @@ for pick in range(1, int(ilosc_rzedow) +1):
     
 
 
+#dummy cell
 
 
 
     wartosc_vat = (float(stawka_vat) / 100) * float(wartosc_netto)
-    pdf.cell(25 ,20, f'{wartosc_vat}' , border=1, ln=0)
+    pdf.cell(25 ,20, f'{round(wartosc_vat, 2)}' , border=1, ln=0)
 
     wartosc_brutto = (float(wartosc_netto) + float(wartosc_vat))
-    pdf.cell(25 ,20, f'{round(wartosc_brutto)}' , border=1, ln=1)
+    pdf.cell(25 ,20, f'{round(wartosc_brutto, 2)}' , border=1, ln=1)
+    
 
 
-#siemka musze zrobic yszukiwarke cen na bookingu 
+pdf.cell(95, 20, '', border=0, ln=0)
+for row in range(1 , int(ilosc_rzedow)):
+    suma_netto =+ wartosc_netto
+    suma_vat =+ wartosc_vat
+    suma_brutto =+ wartosc_brutto
+    pdf.cell(25, 20, f'Suma: {round(suma_netto, 2)}', border=1, ln=0 )
+    pdf.cell(25, 20, f'Suma: {round(suma_vat, 2)}', border=1, ln=0 )
+    pdf.cell(25, 20, f'Suma: {round(suma_brutto, 2)}', border=1, ln=1 )
+ 
 
 pdf.output('pdf_2.pdf')
