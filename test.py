@@ -176,7 +176,7 @@ for pick in range(1, int(ilosc_rzedow) +1):
     wartosc_brutto = (float(wartosc_netto) + float(wartosc_vat))
     pdf.cell(25 ,20, f'{round(wartosc_brutto, 2)}' , border=1, ln=1)
     
-
+#sleep sleep
 
 pdf.cell(95, 20, '', border=0, ln=0)
 for row in range(1 , int(ilosc_rzedow)):
