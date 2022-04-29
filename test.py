@@ -179,13 +179,12 @@ for pick in range(1, int(ilosc_rzedow) +1):
 #sleep sleep
 
 pdf.cell(95, 20, '', border=0, ln=0)
-for row in range(1 , int(ilosc_rzedow)):
-    suma_netto =+ wartosc_netto
-    suma_vat =+ wartosc_vat
-    suma_brutto =+ wartosc_brutto
-    pdf.cell(25, 20, f'Suma: {round(suma_netto, 2)}', border=1, ln=0 )
-    pdf.cell(25, 20, f'Suma: {round(suma_vat, 2)}', border=1, ln=0 )
-    pdf.cell(25, 20, f'Suma: {round(suma_brutto, 2)}', border=1, ln=1 )
+n = int(ilosc_rzedow)
+list1 = []
+
+for i in range(n):
+    element = int(wartosc_netto)
+    list1.append(element)
  
 
 pdf.output('pdf_2.pdf')
