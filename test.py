@@ -135,7 +135,7 @@ pdf.cell(25, 10, 'wartosc brutto', border=1, align='C', ln=True)
 ilosc_rzedow = int(input('ile zostalo wykonanych uslug? '))
 
 
-
+#math 
 
 
 for pick in range(1, int(ilosc_rzedow) +1):
@@ -178,13 +178,22 @@ for pick in range(1, int(ilosc_rzedow) +1):
     
 #sleep sleep
 
-pdf.cell(95, 20, '', border=0, ln=0)
+
+
+
 n = int(ilosc_rzedow)
 list1 = []
-
-for i in range(n):
+zfor i in range(n):
     element = int(wartosc_netto)
     list1.append(element)
- 
+pdf.cell(95, 20, '', border=0, ln=0)
+pdf.cell(25, 20, f'suma: {(list1)}', border=1, ln=0)
+pdf.cell(25, 20, 'suma:', border=1, ln=0)
+pdf.cell(25, 20, 'suma:', border=1, ln=0)
+
+
+
+#DUMMY CELL
+
 
 pdf.output('pdf_2.pdf')
