@@ -170,6 +170,7 @@ for pick in range(1, int(ilosc_rzedow) +1):
 
 
 
+
     wartosc_vat = (float(stawka_vat) / 100) * float(wartosc_netto)
     pdf.cell(25 ,20, f'{round(wartosc_vat, 2)}' , border=1, ln=0)
 
@@ -177,6 +178,8 @@ for pick in range(1, int(ilosc_rzedow) +1):
     pdf.cell(25 ,20, f'{round(wartosc_brutto, 2)}' , border=1, ln=1)
     
 #sleep sleep
+
+
 
 
 
@@ -194,6 +197,6 @@ pdf.cell(25, 20, 'suma:', border=1, ln=0)
 
 
 #DUMMY CELL
-
+#dead project
 
 pdf.output('pdf_2.pdf')
